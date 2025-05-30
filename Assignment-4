@@ -1,3 +1,5 @@
+1)Palindrome or Not
+
 import java.util.*;
 public class Main
 {
@@ -19,8 +21,7 @@ public class Main
 
 
 
-------------------------------------------------------------------------
-
+2)Reverse a String
 
 import java.util.*;
 public class Main
@@ -38,7 +39,8 @@ public class Main
 }
 
 
--------------------------------------------------
+3)Anagrams or not
+
 import java.util.*;
 public class Main
 {
@@ -67,10 +69,10 @@ public class Main
 }
 
 
--------------------------------------------------------------
 
 
 
+4)Identify vowels or consonants
 
 
 import java.util.*;
@@ -98,7 +100,7 @@ public class Main
 	}
 }
 
--------------------------------------------------------------------
+5)Remove duplicates
 
 import java.util.*;
 public class Main
@@ -120,9 +122,9 @@ public class Main
 	}
 }
 
------------------------------------------------------
 
 
+6)Capitalize first letter
 
 public class CapitalizeWords {
     public static String capitalizeEachWord(String sentence) {
@@ -149,7 +151,8 @@ public class CapitalizeWords {
     }
 }
 
-------------------------------------------------------------------------------------------------------
+
+7)Count Word occurrence
 
 import java.util.Scanner;
 
@@ -183,7 +186,7 @@ public class WordCounter {
 }
 
 
----------------------------------------------------------------
+8)Toggle case
 
 import java.util.Scanner;
 
@@ -217,3 +220,4 @@ public class ToggleCase {
 
 
 
+RE
