@@ -1,3 +1,6 @@
+1)Search an element
+
+
 import java.util.*;
 public class Main
 {
@@ -23,9 +26,9 @@ public class Main
 
 
 
--------------------------------------------------------
 
 
+2)Duplicate
 
 import java.util.*;
 
@@ -68,8 +71,8 @@ public class FindDuplicates {
     }
 }
 
------------------------------------------------
 
+3)Left Rotation
 
 import java.util.*;
 
