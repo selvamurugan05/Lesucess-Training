@@ -1,0 +1,71 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	char a=sc.next().charAt(0);
+	if(a=='a'|a=='e'|a=='i'|a=='o'|a=='u'){
+	    System.out.println("Vowels");
+	}
+	else{
+	    System.out.println("consonants");
+	}
+
+------------------------------------------------------------------------------------
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[]args){
+	Scanner sc=new Scanner (System.in);
+	System.out.print("Enter the marks 0 to 100");
+	int mark=sc.nextInt();
+	if(mark>=90 && mark <=100){
+	    System.out.println("Grade A");
+	}
+	else if(mark >=75 && mark <=89){
+	    System.out.println("Grade B");
+	    
+	}
+	else if(mark>=60 && mark <=74){
+	    System.out.println("Grade C");
+	}
+	else if(mark >=40 && mark <=59){
+	    System.out.println("Grade D");
+	}
+	else{
+	    System.out.println("Fail");
+	}
+
+
+
+
+	
+	
+	}
+}
+
+-----------------------------------------------------
+
+
+
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[]args){
+	Scanner sc=new Scanner (System.in);
+	System.out.print("which one you want to choose 1)SI ,2)CI");
+	int n=sc.nextInt();
+	System.out.println("Enter the principal amount:");
+	int p=sc.nextInt();
+		System.out.println("Enter the rate of amount:");
+	int r=sc.nextInt();
+		System.out.println("Enter the time:");
+	int t=sc.nextInt();
+	if(n==1){
+	    System.out.println((p*r*t)/100);
+	}
+	else{
+	    System.out.println(p*(1+r/100)^t-p);
+	}
