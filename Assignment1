@@ -1,0 +1,67 @@
+1.Type conversion
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	float b=sc.nextFloat();
+	char c=sc.next().charAt(0);
+	 float sum=(float)a+b;
+	 int ascii=a+(int)c;
+	System.out.println(sum);
+	System.out.print(ascii);
+	
+	}
+
+2.Arithmetic
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	int b=sc.nextInt();
+	double c=sc.nextDouble();
+	int sum=a+b;
+	int sub=a-b;
+	int mul=a*b;
+	double div=(double) a/b;
+	System.out.println("sum "+sum);
+	System.out.println("sub "+sub);
+	System.out.println("mul "+mul);
+	System.out.println("div "+div);
+	double result=sum*div;
+	System.out.println("result"+result);
+	
+	
+	}
+}
+
+
+3. bitwise
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	int b=sc.nextInt();
+int and =a&b;
+int or =a|b;
+int xor=a^b;
+int left1=a>>2;
+int left2=b>>2;
+int right1=a<<2;
+int right2=b<<2;
+System.out.println(and);
+System.out.println(or);
+System.out.println(xor);
+System.out.println(left1);
+System.out.println(left2);
+System.out.println(right1);
+System.out.println(right2);	
+	}
+}
