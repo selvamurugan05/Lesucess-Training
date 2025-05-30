@@ -1,0 +1,108 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    int[] arr=new int[n];
+	    for(int i=0;i<n;i++){
+	        arr[i]=sc.nextInt();
+	    }
+	    int x=sc.nextInt();
+	    boolean found=false;
+	    for( int i=0;i<n;i++){
+	        if(arr[i]==x){
+	            System.out.println(i);
+	            found=true;
+	            break;
+	        }}
+	      if(!found){
+	          System.out.println("not found");
+	      }
+	      sc.close();
+
+
+
+-------------------------------------------------------
+
+
+
+import java.util.*;
+
+public class FindDuplicates {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+
+        for (int num : arr) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+
+
+        List<Integer> duplicates = new ArrayList<>();
+        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+            if (entry.getValue() > 1) {
+                duplicates.add(entry.getKey());
+            }
+        }
+
+        
+        if (duplicates.isEmpty()) {
+            System.out.println("No duplicates");
+        } else {
+            for (int dup : duplicates) {
+                System.out.print(dup + " ");
+            }
+        }
+    }
+}
+
+-----------------------------------------------
+
+
+import java.util.*;
+
+public class LeftRotateArray {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+
+        
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+
+        int k = scanner.nextInt();
+
+        
+        k = k % n;
+
+
+        int[] rotated = new int[n];
+        for (int i = 0; i < n; i++) {
+            rotated[i] = arr[(i + k) % n];
+        }
+
+
+        for (int num : rotated) {
+            System.out.print(num + " ");
+        }
+    }
+}
+---------------------------------
+	    
