@@ -1,0 +1,106 @@
+1)Recursion based
+
+
+import java.util.Scanner;
+
+public class DigitCounter {
+
+    
+    public static int countDigits(int number) {
+        if (number < 10) {
+            return 1;
+        }
+         
+        return 1 + countDigits(number / 10);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int number = scanner.nextInt();
+        int digitCount = countDigits(number);
+        System.out.println("The number of digits in " + number + " is " + digitCount);
+    }
+}
+
+
+
+
+2)palindrome or not
+
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	String n=sc.nextLine();
+	String reversed=new StringBuilder(n).reverse().toString();
+	if(n.equals(reversed)){
+	    System.out.println("Yes");
+	}
+	else{
+	    System.out.println("No");
+	}
+	}
+}
+
+
+
+
+
+3)power calculator
+
+
+import java.util.*;
+
+public class Main
+{
+     public static int power(int a,int b){
+        if(b==0){
+            return 1;
+        }
+         return a * power(a, b - 1); 
+    }
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+    int a=sc.nextInt();
+    int b=sc.nextInt();
+    System.out.println(power(a,b));
+	}
+}
+
+
+
+
+4)Count Occurrences of a Character in String
+
+
+import java.util.Scanner;
+
+public class CharacterCounter {
+
+    public static int countChar(String str, char ch, int index) {
+        if (index >= str.length()) {
+            return 0; 
+        }
+
+        if (str.charAt(index) == ch) {
+            return 1 + countChar(str, ch, index + 1);
+        }
+
+     
+        return countChar(str, ch, index + 1);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        char ch = scanner.next().charAt(0);
+
+        int count = countChar(str, ch, 0);
+        System.out.println(count);
+    }
+}
+
