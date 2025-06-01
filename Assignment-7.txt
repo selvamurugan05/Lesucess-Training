@@ -1,0 +1,87 @@
+1)
+
+import java.util.*;
+public class Calculator{
+    int result;
+    static int operationcount;
+    void add(int a,int b){
+        result=a+b;
+        operationcount++;
+        System.out.println("sum is"+result);
+    }
+    static void displayOperationCount(){
+        System.out.println(operationcount);
+    }
+    public static void main(String[]args){
+        displayOperationCount();
+        Calculator a=new Calculator();
+        
+        Calculator b=new Calculator();
+        a.add(10,20);
+        a.add(40,20);
+        b.add(1,2);
+        b.add(2,4);
+        displayOperationCount();
+    }
+}
+
+
+2)
+import java.util.*;
+ class BankAccount{
+    private int balance=0;
+    public void deposite(int amount){
+        if(amount>0){
+            balance+=amount;
+            System.out.println(balance);
+        }
+        
+        
+    }
+   int getbalance(){
+       return balance;
+ }
+}
+class Main{
+public static void main(String []args){
+    BankAccount s=new BankAccount();
+    s.deposite(10000);
+    System.out.println(s.getbalance());
+    
+    
+}
+}
+
+
+
+3)
+
+
+class Student {
+    int rollNumber;
+    String name;
+
+       public Student(int rollNumber, String name) {
+        this.rollNumber = rollNumber;
+        this.name = name;
+    }
+
+   
+    public Student(int rollNumber) {
+        this.rollNumber = rollNumber;
+        this.name = "Unknown";
+    }
+
+
+    public void display() {
+        System.out.println("Roll Number: " + rollNumber + ", Name: " + name);
+    }
+
+    public static void main(String[] args) {
+        Student student1 = new Student(101, "Alice");
+        Student student2 = new Student(102); // name will be "Unknown"
+
+        student1.display();
+        student2.display();
+    }
+}
