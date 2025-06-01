@@ -1,0 +1,72 @@
+1)chocolate program
+
+
+import java.util.Scanner;
+
+public class ChocolateFactory {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+                int N = scanner.nextInt();
+
+        int[] arr = new int[N];
+
+
+        for (int i = 0; i < N; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+               int index = 0;
+        for (int i = 0; i < N; i++) {
+            if (arr[i] != 0) {
+                arr[index++] = arr[i];
+            }
+        }
+
+      
+        while (index < N) {
+            arr[index++] = 0;
+        }
+
+        for (int i = 0; i < N; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+
+
+
+2)
+
+
+import java.util.Scanner;
+
+public class RepeatedString {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+               String s = scanner.nextLine();
+        long n = scanner.nextLong();
+
+        long countAInS = 0;
+        for (char c : s.toCharArray()) {
+            if (c == 'a') countAInS++;
+        }
+
+
+        long fullRepeats = n / s.length();
+        int remainder = (int)(n % s.length());
+
+   
+        long countAInRemainder = 0;
+        for (int i = 0; i < remainder; i++) {
+            if (s.charAt(i) == 'a') countAInRemainder++;
+        }
+
+ 
+        long totalCount = (countAInS * fullRepeats) + countAInRemainder;
+        System.out.println(totalCount);
+    }
+}
+
