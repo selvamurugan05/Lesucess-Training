@@ -1,0 +1,59 @@
+1. What is the time complexity of binary search in a sorted array?
+Answer: B) O(log n)
+
+2. What is the average-case time complexity of quicksort?
+Answer: A) O(n log n)
+
+3. What is the time complexity of nested loops (i, j from 0 to n)?
+Answer: C) O(n²)
+
+4. What is the space complexity of merge sort?
+Answer: B) O(n)
+
+5. What is the time complexity of for (int i = 1; i < n; i *= 2)?
+Answer: B) O(log n)
+
+6. What is the space complexity of an iterative binary search algorithm?
+Answer: B) O(1)
+
+7. What is the time complexity of inserting an element at the start of a LinkedList?
+Answer: B) O(1)
+
+8. What is the time complexity of accessing an element in an array using its index?
+Answer: C) O(1)
+
+9. What is the worst-case time complexity of bubble sort?
+Answer: B) O(n²)
+
+10. What is the time complexity of a loop that runs from 0 to n?
+Answer: C) O(n)
+
+11. What is the time complexity of reversing a LinkedList iteratively?
+Answer: A) O(n)
+
+12. What is the space complexity of a recursive function that calls itself n times?
+Answer: A) O(n)
+
+13. What is the average-case time complexity of inserting into a HashMap?
+Answer: B) O(1)
+
+14. What is the time complexity of nested loops with inner loop up to √n?
+Answer: C) O(n√n)
+
+15. What is the space complexity of an array of size n?
+Answer: B) O(n)
+
+16. Which of the following has the lowest average-case time complexity?
+Answer: B) Merge Sort
+
+17. What is the time complexity of multiplying two n x n matrices (standard method)?
+Answer: C) O(n³)
+
+18. What is the best-case time complexity of insertion sort?
+Answer: A) O(n)
+
+19. What is the time complexity of a loop where j starts from i to n?
+Answer: A) O(n²)
+
+20. What is the worst-case time complexity of searching in a hash table?
+Answer: C) O(n)
