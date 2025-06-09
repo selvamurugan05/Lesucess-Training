@@ -1,0 +1,240 @@
+1)
+
+
+import java.util.*;
+
+class Node {
+    int data;
+    Node left, right;
+
+    Node(int val) {
+        data = val;
+        left = right = null;
+    }
+}
+
+public class BinaryTreeLevelOrder {
+    
+        public static Node buildTree(int[] arr) {
+        if (arr.length == 0 || arr[0] == -1) return null;
+
+        Node root = new Node(arr[0]);
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
+
+        int i = 1;
+        while (!queue.isEmpty() && i < arr.length) {
+            Node current = queue.poll();
+
+           
+            if (arr[i] != -1) {
+                current.left = new Node(arr[i]);
+                queue.offer(current.left);
+            }
+            i++;
+
+            
+            if (i < arr.length && arr[i] != -1) {
+                current.right = new Node(arr[i]);
+                queue.offer(current.right);
+            }
+            i++;
+        }
+        return root;
+    }
+
+   
+    public static void levelOrder(Node root) {
+        if (root == null) return;
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
+
+        System.out.print("Level order traversal: ");
+        while (!queue.isEmpty()) {
+            Node current = queue.poll();
+            System.out.print(current.data + " ");
+
+            if (current.left != null) queue.offer(current.left);
+            if (current.right != null) queue.offer(current.right);
+        }
+    }
+
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the level order input (use -1 for null):");
+        
+        String[] input = sc.nextLine().split(" ");
+        int[] arr = new int[input.length];
+        for (int i = 0; i < input.length; i++) {
+            arr[i] = Integer.parseInt(input[i]);
+        }
+
+        Node root = buildTree(arr);
+        levelOrder(root);
+    }
+}
+
+
+
+
+2)
+
+
+import java.util.*;
+
+
+class Node {
+    int data;
+    Node left, right;
+
+    Node(int val) {
+        data = val;
+        left = right = null;
+    }
+}
+
+public class LeafNodeCounter {
+
+  
+    public static Node buildTree(int[] arr) {
+        if (arr.length == 0 || arr[0] == -1) return null;
+
+        Node root = new Node(arr[0]);
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
+
+        int i = 1;
+
+        while (!queue.isEmpty() && i < arr.length) {
+            Node current = queue.poll();
+
+          
+            if (arr[i] != -1) {
+                current.left = new Node(arr[i]);
+                queue.offer(current.left);
+            }
+            i++;
+
+            if (i >= arr.length) break;
+
+                        if (arr[i] != -1) {
+                current.right = new Node(arr[i]);
+                queue.offer(current.right);
+            }
+            i++;
+        }
+
+        return root;
+    }
+
+       public static int countLeafNodes(Node root) {
+        if (root == null)
+            return 0;
+
+        if (root.left == null && root.right == null)
+            return 1;
+
+        return countLeafNodes(root.left) + countLeafNodes(root.right);
+    }
+
+   
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter level order input (use -1 for null):");
+
+        String[] input = sc.nextLine().split(" ");
+        int[] arr = new int[input.length];
+        for (int i = 0; i < input.length; i++) {
+            arr[i] = Integer.parseInt(input[i]);
+        }
+
+        Node root = buildTree(arr);
+        int leafCount = countLeafNodes(root);
+
+        System.out.println("Number of leaf nodes: " + leafCount);
+    }
+}
+
+
+
+3)
+
+
+import java.util.*;
+
+
+class Node {
+    int data;
+    Node left, right;
+
+    Node(int val) {
+        data = val;
+        left = right = null;
+    }
+}
+
+public class TreeHeightFinder {
+
+  
+    public static Node buildTree(int[] arr) {
+        if (arr.length == 0 || arr[0] == -1) return null;
+
+        Node root = new Node(arr[0]);
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
+
+        int i = 1;
+
+        while (!queue.isEmpty() && i < arr.length) {
+            Node current = queue.poll();
+
+          
+            if (arr[i] != -1) {
+                current.left = new Node(arr[i]);
+                queue.offer(current.left);
+            }
+            i++;
+
+            if (i >= arr.length) break;
+
+         
+            if (arr[i] != -1) {
+                current.right = new Node(arr[i]);
+                queue.offer(current.right);
+            }
+            i++;
+        }
+
+        return root;
+    }
+
+        public static int findHeight(Node root) {
+        if (root == null)
+            return 0;
+
+        int leftHeight = findHeight(root.left);
+        int rightHeight = findHeight(root.right);
+
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
+
+  
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter level order input (use -1 for null):");
+
+        String[] input = sc.nextLine().split(" ");
+        int[] arr = new int[input.length];
+        for (int i = 0; i < input.length; i++) {
+            arr[i] = Integer.parseInt(input[i]);
+        }
+
+        Node root = buildTree(arr);
+        int height = findHeight(root);
+
+        System.out.println("Height of the binary tree: " + height);
+    }
+}
+
